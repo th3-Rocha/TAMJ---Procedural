@@ -91,7 +91,7 @@ public class MapGenerator : MonoBehaviour
         CAC.isAsyncGen = isAsyncGen;
         CAC.isDefaultPlane = isNoMeshGen;
         CAC.Gen(); //esta função demora em media 5ms a 8ms
-      //faz aparecer o chunk e espera proximo frame para ar o proximo
+                   //faz aparecer o chunk e espera proximo frame para ar o proximo
     }
 
 
@@ -171,5 +171,8 @@ public struct TerrainType
 {
     public string name;
     public float height;
+    public float minHeight;
     public Color colour;
+    public GameObject regionObj;
+    [Range(0f, 1f)] public float spawnProbability; // Probability for spawning this type
 }

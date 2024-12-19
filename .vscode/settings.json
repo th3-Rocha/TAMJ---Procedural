@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "TAMJ - Procedural.sln"
+    "dotnet.defaultSolution": "TAMJ---Procedural.sln"
 }

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 363693180392184897}
   - component: {fileID: 2792277544693745017}
   - component: {fileID: 358323953411013745}
+  - component: {fileID: 7092121431224775315}
   - component: {fileID: 1757723224610490540}
   - component: {fileID: 7455282743061975869}
   - component: {fileID: 8843968198143931387}
@@ -168,6 +169,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9afff5a0f65258644891e66315a0685f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7092121431224775315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825939984277236813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a588685f7219aa646a888567d443bf99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myNoiseMap: {fileID: 363693180392184897}
+  meshDrawer: {fileID: 1310424759182235174}
+  myGridPos: {fileID: 2792277544693745017}
+  ObjRate: 3
+  regions:
+  - name: Deep Water
+    height: -0.3
+    minHeight: 0
+    colour: {r: 0.17254902, g: 0.31764707, b: 0.627451, a: 0}
+    regionObj: {fileID: 0}
+    spawnProbability: 0
+  - name: Water
+    height: -0.1
+    minHeight: 0
+    colour: {r: 0.227451, g: 0.38823533, b: 0.7725491, a: 0}
+    regionObj: {fileID: 0}
+    spawnProbability: 0
+  - name: Sand
+    height: 0
+    minHeight: 0
+    colour: {r: 0.8156863, g: 0.8156863, b: 0.5019608, a: 0}
+    regionObj: {fileID: 352362867785462181, guid: a9018a401de97374ea2be2049ed8d084, type: 3}
+    spawnProbability: 0.025
+  - name: Grass
+    height: 0.1
+    minHeight: 0
+    colour: {r: 0.34509805, g: 0.5882353, b: 0.098039225, a: 0}
+    regionObj: {fileID: 0}
+    spawnProbability: 1
+  - name: High Grass
+    height: 0.25
+    minHeight: 0
+    colour: {r: 0.25882354, g: 0.38431376, b: 0.1254902, a: 0}
+    regionObj: {fileID: 1709285849344582928, guid: bf202d7ddd51fef4d8f6d1452a6c7a22, type: 3}
+    spawnProbability: 0.03
+  - name: Rock1
+    height: 0.3
+    minHeight: 0
+    colour: {r: 0.36078432, g: 0.27058825, b: 0.24313727, a: 0}
+    regionObj: {fileID: 4775910337522747917, guid: f85df866407b9d848903cddcf9ae14f7, type: 3}
+    spawnProbability: 0.001
+  - name: Rock2
+    height: 0.49
+    minHeight: 0
+    colour: {r: 0.3019608, g: 0.23137257, b: 0.22352943, a: 0}
+    regionObj: {fileID: 9030045177671312607, guid: 7b945a0c19df4c44dac8f35231db5bd5, type: 3}
+    spawnProbability: 0.01
+  - name: Snow
+    height: 0.9
+    minHeight: 0
+    colour: {r: 1, g: 1, b: 1, a: 0}
+    regionObj: {fileID: 0}
+    spawnProbability: 0
+  - name: Ice
+    height: 2
+    minHeight: 0
+    colour: {r: 0, g: 0.832953, b: 1, a: 0}
+    regionObj: {fileID: 0}
+    spawnProbability: 0
+  scale: 1
 --- !u!114 &1757723224610490540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +262,7 @@ MonoBehaviour:
   isAsyncGen: 0
   meshDrawer: {fileID: 1310424759182235174}
   meshDrawerAsync: {fileID: 3235903712582242258}
-  TreeSpawner: {fileID: 0}
+  objSpawner: {fileID: 7092121431224775315}
 --- !u!33 &7455282743061975869
 MeshFilter:
   m_ObjectHideFlags: 0

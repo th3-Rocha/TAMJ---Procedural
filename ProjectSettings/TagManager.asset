@@ -6,11 +6,13 @@ TagManager:
   tags:
   - Ground
   - WorldGen
+  - CaveEntrace
+  - LOD_OBJ
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - LOD_OBJ
   - Water
   - UI
   - 

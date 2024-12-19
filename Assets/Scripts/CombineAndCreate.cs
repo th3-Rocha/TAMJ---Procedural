@@ -12,7 +12,7 @@ public class CombineAndCreate : MonoBehaviour
     public bool isAsyncGen;
     public MeshDrawer meshDrawer;
     public MeshDrawerAndColliderAsync meshDrawerAsync;
-
+    public ObjSpawner objSpawner;
     [ContextMenu("Generate Me")]
     public void Gen()
     {
@@ -57,6 +57,7 @@ public class CombineAndCreate : MonoBehaviour
             {
                 meshDrawerAsync.DrawMeshAndAttachMeshFilterAsync(myNoiseMap.noiseMap);
                 gameObject.transform.localScale = new Vector3(1, 1, 1);
+                objSpawner.StartObjGen();
                 yield return null;
 
 
@@ -66,6 +67,7 @@ public class CombineAndCreate : MonoBehaviour
                 meshDrawer.DrawMeshAndAttachMeshFilter(myNoiseMap.noiseMap);
                 gameObject.transform.localScale = new Vector3(1, 1, 1);
                 colliderCreator.CreateColliderMesh();
+                objSpawner.StartObjGen();
                 yield return null;
 
 
